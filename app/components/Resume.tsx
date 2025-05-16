@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 const Resume = () => (
   <section id="resume" className="py-20 relative overflow-hidden">
@@ -20,7 +20,7 @@ const Resume = () => (
       
       <div className="backdrop-blur-sm bg-white/5 rounded-xl border border-white/10 shadow-xl p-6">
         <div className="flex justify-center">
-          <Image 
+          <img
             src="/resume.jpg" 
             alt="Resume"
             width={800}
