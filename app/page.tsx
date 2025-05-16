@@ -72,7 +72,7 @@ export default function Home() {
     'frontend developer',
     'backend developer'
   ],
-  image: `${process.env.NEXT_PUBLIC_BASE_URL || ''}/me.jpg`,
+  image: `${process.env.NEXT_PUBLIC_BASE_URL || ''}/Me.jpg`,
   siteName: 'Aaryan Sharma Portfolio',
 });
   return (
