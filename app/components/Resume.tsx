@@ -21,7 +21,7 @@ const Resume = () => (
       <div className="backdrop-blur-sm bg-white/5 rounded-xl border border-white/10 shadow-xl p-6">
         <div className="flex justify-center">
           <Image 
-            src="/images/resume.jpg" 
+            src="/resume.jpg" 
             alt="Resume"
             width={800}
             height={1035}

@@ -107,7 +107,7 @@ const Hero = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden backdrop-blur-sm bg-gradient-to-b from-blue-900/20 to-gray-900/20 p-1 shadow-2xl">
                 <div className="absolute inset-0 rounded-full overflow-hidden">
                   <Image
-                    src="/images/me.jpg"
+                    src="/me.jpg"
                     alt="Portrait of Aaryan Sharma"
                     fill
                     className="object-cover"
