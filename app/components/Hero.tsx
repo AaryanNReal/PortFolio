@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import meImage from "@/public/me.jpg";
+
 const Hero = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -106,13 +106,13 @@ const Hero = () => {
               
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden backdrop-blur-sm bg-gradient-to-b from-blue-900/20 to-gray-900/20 p-1 shadow-2xl">
                 <div className="absolute inset-0 rounded-full overflow-hidden">
-                  <Image 
-  src={meImage} 
-  alt="Portrait" 
-  width={320} 
-  height={320} 
-  className="object-cover" 
-/>
+      <img
+            src="/Me.jpg" 
+            alt="Resume"
+            width={800}
+            height={1035}
+            className="rounded-lg shadow-xl border border-white/10"
+          />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
                 </div>
               </div>
