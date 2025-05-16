@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const About = () => {
   return (
     <section id="about" className="py-20 relative overflow-hidden">
@@ -27,7 +25,7 @@ const About = () => {
             </h3>
             
             <p className="text-gray-200 mb-6 leading-relaxed">
-              I'm Aaryan Sharma, a passionate Full Stack Developer with a knack for
+              I&apos;m Aaryan Sharma, a passionate Full Stack Developer with a knack for
               creating dynamic and responsive web applications. I have a strong
               foundation in both front-end and back-end technologies, allowing me
               to build complete solutions from scratch. I thrive in collaborative
@@ -49,12 +47,12 @@ const About = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-              <div className="bg-gradient-to-r from-gray-900  to-gray-800 p-4 rounded-lg border-l-2 border-cyan-400">
+              <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-4 rounded-lg border-l-2 border-cyan-400">
                 <span className="text-cyan-400 text-sm font-medium">Name:</span>
                 <p className="font-medium text-white">Aaryan</p>
               </div>
               
-              <div className="bg-gradient-to-r from-gray-900 to-gray-800  p-4 rounded-lg border-l-2 border-blue-500">
+              <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-4 rounded-lg border-l-2 border-blue-500">
                 <span className="text-blue-400 text-sm font-medium">Email:</span>
                 <a href="mailto:aaryansharmawork@gmail.com" className="font-medium text-white hover:text-blue-300 transition-colors break-all">
                   aaryansharmawork@gmail.com

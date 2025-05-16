@@ -45,7 +45,7 @@ const Experience = () => {
                 <h3 className="text-xl font-semibold text-cyan-400">{item.role}</h3>
                 <span className="text-white font-medium">{item.company}</span>
               </div>
-              <span className="text-gray-300 block mb-4 bg-gray-800/50 px-3 py-1 rounded-full inline-block">
+              <span className="text-gray-300 block mb-4 bg-gray-800/50 px-3 py-1 rounded-full ">
                 {item.duration}
               </span>
               <ul className="list-disc list-inside space-y-2 text-gray-300 marker:text-cyan-400">
