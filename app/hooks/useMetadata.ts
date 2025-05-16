@@ -13,7 +13,7 @@ const useMetadata = ({
   title,
   description,
   keywords = [],
-  image = '/preview-image.jpg', // Default preview image
+  image = '/preview-image.jpg',
   url = typeof window !== 'undefined' ? window.location.href : '',
   siteName = 'My Portfolio',
 }: MetadataProps) => {
@@ -24,16 +24,14 @@ const useMetadata = ({
     // Helper function to update/create meta tags
     const updateMetaTag = (attr: 'name' | 'property', name: string, content: string) => {
       const selector = `meta[${attr}="${name}"]`;
-      let tag = document.querySelector(selector) as HTMLMetaElement;
-      
+      let tag = document.querySelector(selector) as HTMLMetaElement | null;
+
       if (!tag) {
         tag = document.createElement('meta');
-        attr === 'property' 
-          ? tag.setAttribute('property', name)
-          : tag.setAttribute('name', name);
+        tag.setAttribute(attr, name);
         document.head.appendChild(tag);
       }
-      tag.content = content;
+      tag.setAttribute('content', content);
     };
 
     // Standard meta tags
@@ -47,8 +45,8 @@ const useMetadata = ({
     updateMetaTag('property', 'og:url', url);
     updateMetaTag('property', 'og:type', 'website');
     updateMetaTag('property', 'og:site_name', siteName);
-    
-    // WhatsApp specific recommendation (uses OG but needs larger image)
+
+    // Image dimensions for better social sharing
     updateMetaTag('property', 'og:image:width', '1200');
     updateMetaTag('property', 'og:image:height', '630');
     updateMetaTag('property', 'og:image:alt', `${title} Preview Image`);
@@ -60,11 +58,12 @@ const useMetadata = ({
     updateMetaTag('name', 'twitter:image', image);
     updateMetaTag('name', 'twitter:image:alt', `${title} Preview Image`);
 
-    // Additional recommended tags
-    updateMetaTag('name', 'theme-color', '#0f172a'); // Match your site's theme
+    // Theme color for mobile browsers
+    updateMetaTag('name', 'theme-color', '#0f172a');
 
+    // Cleanup function
     return () => {
-      document.title = '';
+      document.title = ''; // Reset title
     };
   }, [title, description, keywords, image, url, siteName]);
 };

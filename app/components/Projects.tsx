@@ -1,7 +1,5 @@
-import { Project } from "../types/types";
-import Image from "next/image";
-import { useState } from "react";
-import { ExternalLink, Github, ArrowUpRight, PackageOpen } from "lucide-react";
+
+import { ExternalLink, Github,} from "lucide-react";
 
 const projectsData = [
   {
