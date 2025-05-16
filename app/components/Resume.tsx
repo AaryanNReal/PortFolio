@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 
 const Resume = () => (
   <section id="resume" className="py-20 relative overflow-hidden">
