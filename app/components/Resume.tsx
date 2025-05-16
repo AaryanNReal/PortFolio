@@ -1,5 +1,5 @@
-
-
+import Image from "next/image";
+import meImage from "@/public/Resume.jpg"
 const Resume = () => (
   <section id="resume" className="py-20 relative overflow-hidden">
     {/* Gradient overlay */}
@@ -20,13 +20,12 @@ const Resume = () => (
       
       <div className="backdrop-blur-sm bg-white/5 rounded-xl border border-white/10 shadow-xl p-6">
         <div className="flex justify-center">
-          <img
-            src="/resume.jpg" 
-            alt="Resume"
-            width={800}
-            height={1035}
-            className="rounded-lg shadow-xl border border-white/10"
-          />
+          <Image 
+  src={meImage} 
+  alt="Portrait" 
+  
+  className="object-cover" 
+/>
         </div>
         
         <div className="mt-8 text-center">
