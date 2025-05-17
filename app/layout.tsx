@@ -1,50 +1,58 @@
-  'use client'
-  
-  import { Geist, Geist_Mono } from "next/font/google";
-  import "./globals.css";
-  import useMetadata from "./hooks/useMetadata";
-  const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-  });
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import type { Metadata } from 'next';
 
-  const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-  });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
-
-  export default function RootLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
-
-    useMetadata({
-    title: 'Aaryan Sharma | Full Stack Developer',
-    description: 'Personal portfolio of Aaryan Sharma, showcasing projects, skills, and professional experience as a Full Stack Developer specializing in React, Next.js, and modern web technologies.',
-    keywords: [
-      'portfolio',
-      'Aaryan Sharma',
-      'full stack developer',
-      'web development',
-      'react developer',
-      'nextjs developer',
-      'typescript',
-      'frontend developer',
-      'backend developer'
+export const metadata: Metadata = {
+  title: "Aaryan PortFolio",
+  description: "My career Portfolio",
+  keywords: ["Portfolio", "Aaryan", "Career"],
+  authors: [{ name: "Aaryan", url: "https://aaryan-portfolio-sigma.vercel.app/" }],
+  openGraph: {
+    title: "Aaryan Portfolio",
+    description: "Aaryan's Portfolio",
+    url: "https://aaryan-portfolio-sigma.vercel.app/",
+    siteName: "Aaryan PortFolio",
+    images: [
+      {
+        url: "/Me.jpg",
+        width: 800,
+        height: 600,
+      },
     ],
-    image: "/Me.jpg" ,
-    siteName: 'Aaryan Sharma Portfolio',
-  });
-    return (
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    );
-  }
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Your Website Title",
+    description: "Your website description",
+    images: ["https://yourwebsite.com/twitter-image.jpg"],
+  },
+  themeColor: "#ffffff",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
+    </html>
+  );
+}

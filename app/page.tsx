@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Navbar from './components/Navbar';
 import { useEffect } from 'react';
-import  useMetadata  from './hooks/useMetadata';
+
 
 export default function Home() {
   useEffect(() => {
@@ -58,23 +58,7 @@ export default function Home() {
     };
   }, []);
 
-   useMetadata({
-  title: 'Aaryan Sharma | Full Stack Developer',
-  description: 'Personal portfolio of Aaryan Sharma, showcasing projects, skills, and professional experience as a Full Stack Developer specializing in React, Next.js, and modern web technologies.',
-  keywords: [
-    'portfolio',
-    'Aaryan Sharma',
-    'full stack developer',
-    'web development',
-    'react developer',
-    'nextjs developer',
-    'typescript',
-    'frontend developer',
-    'backend developer'
-  ],
-  image: "/Me.jpg",
-  siteName: 'Aaryan Sharma Portfolio',
-});
+   
   return (
     <>
       <style jsx global>{`
