@@ -29,18 +29,7 @@ const Resume = () => (
           />
         </div>
         
-        <div className="mt-8 text-center">
-          <a 
-            href="/resume.pdf" 
-            download
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
-          >
-            Download Resume
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-          </a>
-        </div>
+        
       </div>
     </div>
   </section>
